@@ -1,5 +1,6 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -15,114 +16,150 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Logo from '../../../src/assets/Images/logo.svg';
-import navItems from '../../layouts/Arraydata/Data'
+import Stack from '@mui/material/Stack';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import navItems from '../../layouts/Arraydata/navItems';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import { useMediaQuery } from '@mui/material';
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import MainSlider from '../../components/MiddleContent/MainSlider'
+import Row2 from '../../components/MiddleContent/Row2';
 
 const drawerWidth = 240;
-
 
 function Header(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  const isSmallScreen = useMediaQuery('(max-width:600px)');
 
   const handleDrawerToggle = () => {
-    setMobileOpen((prevState) => !prevState);
+    setMobileOpen(!mobileOpen);
+  };
+
+  const [anchorEl, setAnchorEl] = React.useState(null);
+
+  const handleMenuClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleMenuClose = () => {
+    setAnchorEl(null);
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
-      </Typography>
+    <Box sx={{ width: drawerWidth }} onClick={handleDrawerToggle}>
+      <Toolbar />
       <Divider />
       <List>
-        {navItems.map((item) => (
+        {navItems.map((item, index) => (
           <React.Fragment key={item.id}>
-            <ListItem disablePadding>
-              <ListItemButton sx={{ textAlign: 'center' }}>
-                <ListItemText primary={item.title} /> {/* Rendering the 'title' property */}
+            <ListItem disablePadding sx={{ py: 1 }}>
+              <ListItemButton onClick={handleMenuClick}>
+                <ListItemText primary={item.title} />
+                {item.subItems && <ArrowDropDownIcon />}
               </ListItemButton>
-            </ListItem>
-            {item.subItems && item.subItems.length > 0 && (
-              <List>
-                {item.subItems.map((subItem) => (
-                  <ListItem key={subItem.id} disablePadding>
-                    <ListItemButton sx={{ textAlign: 'center' }}>
-                      <ListItemText primary={subItem.title} /> {/* Rendering the 'title' property */}
-                    </ListItemButton>
-                  </ListItem>
+              <Menu
+                anchorEl={anchorEl}
+                open={Boolean(anchorEl)}
+                onClose={handleMenuClose}
+              >
+                {item.subItems && item.subItems.map((subItem) => (
+                  <MenuItem key={subItem.id} component={Link} to={subItem.href} onClick={handleMenuClose}>
+                    {subItem.title}
+                  </MenuItem>
                 ))}
-              </List>
-            )}
+              </Menu>
+            </ListItem>
+            {index !== navItems.length - 1 && <Divider />} {/* Add divider after each item except the last one */}
           </React.Fragment>
         ))}
       </List>
-
-
     </Box>
   );
 
-  // Ensure window object is defined before accessing its properties
-  const container = window ? () => window().document.body : undefined;
+  const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar position="fixed" sx={{ backgroundColor: 'white', color: 'black' }}>
+      <IconButton
+        color="inherit"
+        aria-label="open drawer"
+        edge="start"
+        onClick={handleDrawerToggle}
+        sx={{ mr: 1, display: { sm: 'none' }, position: 'fixed', zIndex: 1, mx:0,mt:4}}
+      >
+        <MenuIcon />
+      </IconButton>
+      <AppBar position="fixed" sx={{ bgcolor: 'white', height: '100px', zIndex: 0 }}>
         <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
-          >
-            <MenuIcon />
-          </IconButton>
           <Typography
             variant="h6"
             component="div"
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+            sx={{
+              flexGrow: 1,
+              display: { sm: 'block' },
+              position: 'fixed',
+              mx:3,
+              mt:5
+            }}
           >
             <img src={Logo} alt="Logo" style={{ height: '25px', width: 'auto' }} />
           </Typography>
-          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-            {navItems.map((item) => (
-              <Button key={item.label} sx={{ color: 'black' }}>
-                {item.label}
-              </Button>
-            ))}
+
+          <Box sx={{ flexGrow: 1 }} />
+          <Box sx={{ display: { xs: 'none', md: 'flex' }, marginLeft: 'auto', mx:3,mt:4,mr:5}}>
+            {!isSmallScreen &&
+              navItems.map((item) => (
+                <Button
+                  key={item.id}
+                  sx={{ color: 'black', marginRight: 2 }}
+                  onClick={handleMenuClick}
+                >
+                  {item.title}
+                </Button>
+              ))}
           </Box>
+
+          <Stack>
+            {!isSmallScreen &&
+              <Button variant="contained" disabled sx={{ borderRadius: 5, position: 'relative', mx:3,mt:4,mr:4 }}>
+                Entrar
+                <AccountCircleIcon sx={{ position: 'absolute', left: 5 }} />
+              </Button>
+            }
+          </Stack>
         </Toolbar>
       </AppBar>
-      <nav>
-        <Drawer
-          container={container}
-          variant="temporary"
-          open={mobileOpen}
-          onClose={handleDrawerToggle}
-          ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
-          }}
-          sx={{
-            display: { xs: 'block', sm: 'none' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
-          }}
-        >
-          {drawer}
-        </Drawer>
-      </nav>
-      <Box component="main" sx={{ p: 3 }}>
-        <Toolbar />
+      <Drawer
+        container={container}
+        variant="temporary"
+        open={mobileOpen}
+        onClose={handleDrawerToggle}
+        ModalProps={{
+          keepMounted: true,
+        }}
+        sx={{
+          display: { xs: 'block', md: 'none' },
+          '& .MuiDrawer-paper': { width: drawerWidth },
+        }}
+      >
+        {drawer}
+      </Drawer>
+      <Box
+        component="main"
+        sx={{ flexGrow: 1, bgcolor: 'background.default', }}
+      >
+        <Toolbar/>
+        <MainSlider/>
+        <Row2/>
       </Box>
     </Box>
   );
 }
 
 Header.propTypes = {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
   window: PropTypes.func,
 };
 

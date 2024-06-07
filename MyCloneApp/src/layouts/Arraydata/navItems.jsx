@@ -35,8 +35,8 @@ const navItems = [
   },
   {
     id: 3,
-    title: "Anuncior",
-    href: "/anuncior",
+    title: "Anunciar",
+    href: "/anunciar", // Fixed typo in "Anunciar"
     subItems: [
       {
         id: 31,
@@ -52,7 +52,7 @@ const navItems = [
   },
   {
     id: 4,
-    title: "Links uteis",
+    title: "Links Úteis", // Adjusted title with correct accent
     href: "/yet-another-item",
     subItems: [
       {
@@ -67,11 +67,11 @@ const navItems = [
       },
     ],
   },
-  // Add two more arrays of menu items here...
   {
     id: 5,
     title: "Ajuda",
     href: "/ajuda",
   },
-]
-  export default navItems;
+];
+
+export default navItems;

@@ -16,7 +16,6 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Logo from '../../../src/assets/Images/logo.svg';
-import Stack from '@mui/material/Stack';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import navItems from '../../layouts/Arraydata/navItems';
@@ -25,6 +24,10 @@ import { useMediaQuery } from '@mui/material';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import MainSlider from '../../components/MiddleContent/MainSlider'
 import Row2 from '../../components/MiddleContent/Row2';
+import Row3 from '../../components/MiddleContent/Row3';
+import CloseIcon from '@mui/icons-material/Close';
+
+
 
 const drawerWidth = 240;
 
@@ -49,6 +52,23 @@ function Header(props) {
 
   const drawer = (
     <Box sx={{ width: drawerWidth }} onClick={handleDrawerToggle}>
+      <Typography
+            variant="h6"
+            component="div"
+            sx={{
+              flexGrow: 1,
+              display: { sm: 'block' },
+              position: 'fixed',
+              mx: 3,
+              mt: 2
+            }}
+          >
+            <img src={Logo} alt="Logo" style={{ height: '25px', width: 'auto' }} />
+            <IconButton aria-label="Close">
+        <CloseIcon />
+      </IconButton>
+     </Typography>
+     <Divider/>
       <Toolbar />
       <Divider />
       <List>
@@ -71,7 +91,6 @@ function Header(props) {
                 ))}
               </Menu>
             </ListItem>
-            {index !== navItems.length - 1 && <Divider />} {/* Add divider after each item except the last one */}
           </React.Fragment>
         ))}
       </List>
@@ -88,7 +107,7 @@ function Header(props) {
         aria-label="open drawer"
         edge="start"
         onClick={handleDrawerToggle}
-        sx={{ mr: 1, display: { sm: 'none' }, position: 'fixed', zIndex: 1, mx:0,mt:4}}
+        sx={{ mr: 1, display: { sm: 'none' }, position: 'fixed', zIndex: 1, mx: 0, mt: 4 }}
       >
         <MenuIcon />
       </IconButton>
@@ -101,15 +120,15 @@ function Header(props) {
               flexGrow: 1,
               display: { sm: 'block' },
               position: 'fixed',
-              mx:3,
-              mt:5
+              mx: 3,
+              mt: 5
             }}
           >
             <img src={Logo} alt="Logo" style={{ height: '25px', width: 'auto' }} />
           </Typography>
 
           <Box sx={{ flexGrow: 1 }} />
-          <Box sx={{ display: { xs: 'none', md: 'flex' }, marginLeft: 'auto', mx:3,mt:4,mr:5}}>
+          <Box sx={{ display: { xs: 'none', md: 'flex' }, marginLeft: 'auto', mx: 3, mt: 4, mr: 5 }}>
             {!isSmallScreen &&
               navItems.map((item) => (
                 <Button
@@ -122,14 +141,31 @@ function Header(props) {
               ))}
           </Box>
 
-          <Stack>
+        
             {!isSmallScreen &&
-              <Button variant="contained" disabled sx={{ borderRadius: 5, position: 'relative', mx:3,mt:4,mr:4 }}>
-                Entrar
-                <AccountCircleIcon sx={{ position: 'absolute', left: 5 }} />
-              </Button>
-            }
-          </Stack>
+             <Button
+            
+             onClick={handleMenuClick}
+             sx={{
+               backgroundColor: '#eeeeee', // Set the background color to your desired color
+               borderRadius: 5,
+               position: 'relative',
+               mt: 4,
+               mr: 4,
+               color: 'black', // Set text color to black
+               height: '50px', // Set the height of the button
+               width: '120px', // Set the width of the button
+               display: 'flex',
+               justifyContent: 'center',
+               alignItems: 'center',
+             }}
+           >
+             Entrar
+             <AccountCircleIcon sx={{ marginLeft: -8 }} />
+           </Button>
+           
+              }
+          
         </Toolbar>
       </AppBar>
       <Drawer
@@ -151,9 +187,10 @@ function Header(props) {
         component="main"
         sx={{ flexGrow: 1, bgcolor: 'background.default', }}
       >
-        <Toolbar/>
-        <MainSlider/>
-        <Row2/>
+        <Toolbar />
+        <MainSlider />
+        <Row2 />
+        <Row3/>
       </Box>
     </Box>
   );

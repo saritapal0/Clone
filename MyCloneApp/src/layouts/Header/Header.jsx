@@ -22,10 +22,14 @@ import navItems from '../../layouts/Arraydata/navItems';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import { useMediaQuery } from '@mui/material';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-import MainSlider from '../../components/MiddleContent/MainSlider'
-import Row2 from '../../components/MiddleContent/Row2';
-import Row3 from '../../components/MiddleContent/Row3';
 import CloseIcon from '@mui/icons-material/Close';
+// import MainSlider from '../../components/MiddleContent/MainSlider'
+// import Row2 from '../../components/MiddleContent/Row2';
+// import Row3 from '../../components/MiddleContent/Row3';
+// import Row4 from '../../components/MiddleContent/Row4';
+// import Row5 from '../../components/MiddleContent/Row5';
+// import Row6 from '../../components/MiddleContent/Row6';
+
 
 
 
@@ -111,7 +115,7 @@ function Header(props) {
       >
         <MenuIcon />
       </IconButton>
-      <AppBar position="fixed" sx={{ bgcolor: 'white', height: '100px', zIndex: 0 }}>
+      <AppBar  sx={{ bgcolor: 'white', height: '100px', zIndex: 0 }}>
         <Toolbar>
           <Typography
             variant="h6"
@@ -188,9 +192,12 @@ function Header(props) {
         sx={{ flexGrow: 1, bgcolor: 'background.default', }}
       >
         <Toolbar />
-        <MainSlider />
+        {/* <MainSlider />
         <Row2 />
         <Row3/>
+        <Row4/>
+        <Row5/>
+        <Row6/> */}
       </Box>
     </Box>
   );

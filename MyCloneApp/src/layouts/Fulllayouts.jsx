@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { experimentalStyled, useMediaQuery, Container, Box, CssBaseline } from "@mui/material";
 import { Outlet, useLocation } from "react-router-dom";
 import Header from '../layouts/Header/Header';
-//import Sidebar from "../layouts/Sidebar/Sidebar";
+import Home from "../layouts/Home/Home";
 import Footer from "../layouts/Footer/Footer";
 import { TopbarHeight } from "../assets/global/Theme-variable";
 
@@ -36,11 +36,7 @@ const FullLayout = () => {
   return (
     <MainWrapper>
 
-      {/* <Sidebar
-        isSidebarOpen={isSidebarOpen}
-        isMobileSidebarOpen={isMobileSidebarOpen}
-        onSidebarClose={() => setMobileSidebarOpen(false)}
-      /> */}
+      
       <Header
         sx={{
           paddingLeft: isSidebarOpen && lgUp ? "265px" : "",
@@ -54,12 +50,14 @@ const FullLayout = () => {
         <Container
           maxWidth={false}
           sx={{
-            paddingLeft: lgUp ? "280px!important" : "",
-            overflow: "hidden",
+              pt:5,
+              mr:6,
+               overflow: "hidden",
           }}
         >
           <Box sx={{ minHeight: "calc(100vh - 170px)" }}>
             <Outlet />
+            <Home/>
           </Box>
           <Footer />
         </Container>

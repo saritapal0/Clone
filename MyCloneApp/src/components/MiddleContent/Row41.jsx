@@ -10,14 +10,14 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Lock from '../../assets/Images/lock.webp'; // Import image
 
 
-export default function BasicCard() {
+export default function Row4() {
   return (
     <Box>
-      <Card sx={{ display: 'flex', maxWidth: 732, minHeight: 550, backgroundColor: '#bdbdbd' }}>
+      <Card sx={{ display: 'flex', maxWidth: 720, minHeight: 539, backgroundColor: '#bdbdbd', borderRadius: 0  }}>
         <CardContent sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
-          <Grid container direction="column" justifyContent="space-between" style={{ width: '52%' }}>
+          <Grid container direction="column" justifyContent="space-between" style={{ width: '50%' }}>
             <Grid item>
-              <Typography variant="h4" gutterBottom fontWeight="normal">Comprar seu imóvel e ter um cantinho só seu</Typography>
+              <Typography variant="h1" gutterBottom fontWeightBold="normal">Comprar seu imóvel e ter um cantinho só seu</Typography>
               <Typography variant="body1" paragraph fontWeight="normal">
                 Conte com nossos consultores para conseguir as melhores taxas de financiamento, tirar todas as suas dúvidas e para qualquer suporte durante todo o processo.
               </Typography>
@@ -27,7 +27,6 @@ export default function BasicCard() {
               <Button variant="contained" color="primary" sx={{ borderRadius: '20px', color: 'black', backgroundColor: "white", mt: 2, width: "250px" }} endIcon={<ArrowForwardIcon />}>
                 Como alugar no QuintoAndar
               </Button>
-
             </Grid>
           </Grid>
           <CardMedia

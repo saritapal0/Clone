@@ -13,8 +13,8 @@ import Row31 from '../../components/MiddleContent/Row31'
 export default function Row3() {
   return (
     <Box>
-<Card sx={{ display: 'flex', maxWidth: 710, minHeight: 610, backgroundColor: '#e1bee7', mt: 3 }}>
-<CardContent sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
+    <Card sx={{ display: 'flex', maxWidth: 710, minHeight: 610, backgroundColor: '#e1bee7', mt: 0,borderRadius:0 }}>
+    <CardContent sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
         <Grid container direction="column" justifyContent="space-between" style={{ width: '20%' }}>
           <Grid item>
             <Typography variant="h1" gutterBottom fontWeight="normal">Alugar bem, sem complicação e fiador</Typography>

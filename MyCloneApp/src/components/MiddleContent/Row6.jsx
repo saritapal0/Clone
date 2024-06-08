@@ -13,7 +13,7 @@ import Ph from '../../assets/Images/Ph.webp'; // Import image
 export default function BasicCard() {
   return (
     <Box>
-      <Card sx={{ display: 'flex', maxWidth: 700, minHeight: 575, backgroundColor: '#3f51b5' }}>
+      <Card sx={{ display: 'flex', maxWidth: 700, minHeight: 575, backgroundColor: '#3f51b5',borderRadius:0 }}>
         <CardContent sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
           <Grid container direction="column" justifyContent="space-between" style={{ width: '20%' }}>
             <Grid item>

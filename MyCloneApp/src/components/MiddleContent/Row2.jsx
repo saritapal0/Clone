@@ -10,15 +10,15 @@ import Typography from '@mui/material/Typography';
 function BlueCard() {
   const cardStyle = {
     border: '20px solid blue',
-    padding: '20px',
-    width: '550px',
+    padding: '30px',
+    width: '500px',
     height: '550px',
-    margin: '8px auto',
+    marginTop: '80px',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
     alignItems: 'center',
-    textAlign: 'left',
+    textAlign: 'left'
   };
 
   const contentStyle = {
@@ -31,7 +31,7 @@ function BlueCard() {
   };
 
   return (
-    <Card style={cardStyle}>
+    <Card style={cardStyle} sx={{borderRadius:0 }}>
       <CardContent style={contentStyle}>
         <Typography variant="h1">
           Vem ver os Favoritos da Malu Borges no QuintoAndar.
@@ -57,7 +57,7 @@ export default function Row2() {
   return (
     <Grid container spacing={4} justifyContent="center">
       <Grid item xs={12} sm={6}>
-        <img src={imageSrc} alt="Description of the image" style={{ maxWidth: '120%', height: '517px', margin:40}} />
+        <img src={imageSrc} alt="Description of the image" style={{ maxWidth: '120%', height: '550px', margin:80,  marginLeft: '-5px', marginRight: 'auto', }} />
       </Grid>
       <Grid item xs={12} sm={6}>
         <Box display="flex" justifyContent="center">

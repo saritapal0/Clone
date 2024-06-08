@@ -13,8 +13,8 @@ import Gate from '../../assets/Images/Gate.webp'; // Import image
 export default function BasicCard() {
   return (
     <Box>
-    <Card sx={{ display: 'flex', maxWidth: 700, minHeight: 575, backgroundColor: '#ffebee' }}>
-      <CardContent sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
+    <Card sx={{ display: 'flex', maxWidth: 710, minHeight: 610, backgroundColor: '#fce4ec', mt: 0,borderRadius:0 }}>
+    <CardContent sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
         <Grid container direction="column" justifyContent="space-between" style={{ width: '20%' }}>
           <Grid item>
             <Typography variant="h1" gutterBottom fontWeight="normal">Alugar bem, sem complicação e fiador</Typography>
@@ -33,7 +33,7 @@ export default function BasicCard() {
         </Grid>
         <CardMedia
           component="img"
-          sx={{ width: '60%' }}
+          sx={{ width: '50%' }}
           image={Gate} // Set the imported image variable as the source
           alt="Placeholder Image"
         />

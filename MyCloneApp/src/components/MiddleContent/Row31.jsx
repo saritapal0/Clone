@@ -13,7 +13,7 @@ export default function Row31() {
           maxHeight: '650px', 
           width: '520px', 
           marginTop: -1000,
-          marginBottom:32
+          marginBottom:32,
         }} 
       />
     </Box>

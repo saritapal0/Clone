@@ -18,6 +18,8 @@ const PageWrapper = experimentalStyled("div")(({ theme }) => ({
   flex: "1 1 auto",
   overflow: "hidden",
   backgroundColor: theme.palette.background.default,
+  height: "100%", // Set the height to 100% of the parent container
+  width: "100%", // Set the width to 100% of the parent container
   [theme.breakpoints.up("lg")]: {
     paddingTop: TopbarHeight,
   },
@@ -25,6 +27,7 @@ const PageWrapper = experimentalStyled("div")(({ theme }) => ({
     paddingTop: "64px",
   },
 }));
+
 
 const FullLayout = () => {
   const location = useLocation();

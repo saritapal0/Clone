@@ -10,8 +10,8 @@ export default function Row4() {
         src={Image4} 
         alt="My Image"
         style={{
-          height: '528px', // Set the height (adjust as needed)
-          width: '450px', // Set the width (adjust as needed)
+          height: '535px', // Set the height (adjust as needed)
+          width: '500px', // Set the width (adjust as needed)
           marginRight: '0px' // Add some margin to the right for spacing
         }} 
       />

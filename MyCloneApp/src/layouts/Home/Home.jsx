@@ -6,7 +6,7 @@ import Row4 from '../../components/MiddleContent/Row4'
 import Row5 from '../../components/MiddleContent/Row5'
 import Row6 from '../../components/MiddleContent/Row6'
 import Text from '../../components/MiddleContent/Text'
-
+import Populares from '../../components/MiddleContent/Populares'
 
 
 
@@ -21,6 +21,7 @@ export default function Home() {
         <Row5/>
         <Row6/>
         <Text/>
+        <Populares/>
     </>
   )
 }

@@ -65,18 +65,20 @@ const card = (
 export default function MainSlider() {
   return (
     <Box
-      sx={{
-        display: 'flex',
-        justifyContent: 'flex-start', // Align items to the left
-        alignItems: 'center',
-        height: '125vh', // Full viewport height
-        width: '100vw', // Full viewport width
-        backgroundImage: `url(${bgimg})`, // Use the imported background image
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        paddingLeft: '2vw', // Add left padding to center the card
-      }}
-    >
+    sx={{
+      display: 'flex',
+      justifyContent: 'flex-start', // Align items to the left
+      alignItems: 'center',
+      height: '100vh', // Full viewport height
+      width: '100%', // Full viewport width
+      backgroundImage: `url(${bgimg})`, // Use the imported background image
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      margin: 0, // Remove margin to take full space
+      padding: 0, // Remove padding to take full space
+    }}
+  >
+  
       <Card variant="outlined" sx={{ borderRadius: 0 }}>{card}</Card>
     </Box>
   );

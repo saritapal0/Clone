@@ -29,8 +29,6 @@ const card = (
         alignItems: 'left', // Align items vertically
         '& > :not(style)': { m: 1 }, // Apply margin to all children except style tag
       }}
-      noValidate
-      autoComplete="off"
     >
       <TextField
         id="outlined-basic"
@@ -70,12 +68,10 @@ export default function MainSlider() {
       justifyContent: 'flex-start', // Align items to the left
       alignItems: 'center',
       height: '100vh', // Full viewport height
-      width: '100%', // Full viewport width
+      width: '100vw', // Full viewport width
       backgroundImage: `url(${bgimg})`, // Use the imported background image
       backgroundSize: 'cover',
       backgroundPosition: 'center',
-      margin: 0, // Remove margin to take full space
-      padding: 0, // Remove padding to take full space
     }}
   >
   
@@ -83,5 +79,3 @@ export default function MainSlider() {
     </Box>
   );
 }
-
-

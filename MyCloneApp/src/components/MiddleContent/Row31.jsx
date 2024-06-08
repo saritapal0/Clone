@@ -2,17 +2,18 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import image from "../../assets/Images/image.webp";
 
-
-export default function Row3() {
+export default function Row31() {
   return (
-    <Box sx={{ display: 'flex', justifyContent: 'flex-start', paddingLeft: '200px', marginLeft: '150px', mt:"30px" }}>
+    <Box sx={{ paddingLeft: '475px', marginLeft: '220px' }}>
       <img 
         src={image} 
         style={{ 
           maxWidth: '100%', 
-          height: '547px', 
-          maxHeight: '600px', // Adjust the maximum height as needed
-          width: '550px' 
+          height: '610px', 
+          maxHeight: '650px', 
+          width: '520px', 
+          marginTop: -1000,
+          marginBottom:32
         }} 
       />
     </Box>

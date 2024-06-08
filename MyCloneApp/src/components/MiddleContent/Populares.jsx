@@ -3,7 +3,7 @@ import { Card, CardContent, Typography } from '@mui/material';
 
 function SimpleCard() {
   return (
-    <Card sx={{ border: 10, maxWidth: 300 }}>
+    <Card sx={{ border: 10, borderColor: '#bdbdbd', maxWidth: "1200px", height: "520px" }}>
       <CardContent>
         <Typography variant="h5" component="div">
           Simple Card

@@ -5,14 +5,14 @@ import {
   Route
 } from "react-router-dom";
 import FullLayout from "../layouts/Fulllayouts";
-// import Home from "../layouts/Home/Home"
+import Home from "../layouts/Home/Home"
 
 
 const routes = createBrowserRouter(
   createRoutesFromElements(
     <>
      <Route path="/" element={<FullLayout />} >
-     {/* <Route path="/home" element={<Home />} > */}
+     <Route index element={<Home />} />
    </Route>
     </>
   )

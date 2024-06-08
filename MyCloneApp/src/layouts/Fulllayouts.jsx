@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { experimentalStyled, useMediaQuery, Container, Box, CssBaseline } from "@mui/material";
 import { Outlet, useLocation } from "react-router-dom";
 import Header from '../layouts/Header/Header';
-import Home from "../layouts/Home/Home";
 import Footer from "../layouts/Footer/Footer";
 import { TopbarHeight } from "../assets/global/Theme-variable";
+
 
 const MainWrapper = experimentalStyled("div")(({ theme }) => ({
   display: "flex",
@@ -38,29 +38,16 @@ const FullLayout = () => {
 
   return (
     <MainWrapper>
-
-      
-      <Header
-        sx={{
-          paddingLeft: isSidebarOpen && lgUp ? "265px" : "",
-          backgroundColor: "#ffffff",
-        }}
-        toggleSidebar={() => setSidebarOpen(!isSidebarOpen)}
-        toggleMobileSidebar={() => setMobileSidebarOpen(true)}
-      />
-
+      <Header/>
       <PageWrapper>
         <Container
           maxWidth={false}
           sx={{
-              pt:5,
-              mr:6,
-               overflow: "hidden",
+             pt:5,
           }}
         >
-          <Box sx={{ minHeight: "calc(100vh - 170px)" }}>
+          <Box sx={{ minHeight: "calc(100vh - 170px)"}}>
             <Outlet />
-            <Home/>
           </Box>
           <Footer />
         </Container>

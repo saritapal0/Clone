@@ -8,13 +8,13 @@ import { Box } from '@mui/material';
 import CardMedia from '@mui/material/CardMedia';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Table from '../../assets/Images/Table.webp'; // Import image
+import Row31 from '../../components/MiddleContent/Row31'
 
-
-export default function BasicCard() {
+export default function Row3() {
   return (
     <Box>
-    <Card sx={{ display: 'flex', maxWidth: 700, minHeight: 575, backgroundColor: '#e1bee7' }}>
-      <CardContent sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
+<Card sx={{ display: 'flex', maxWidth: 710, minHeight: 610, backgroundColor: '#e1bee7', mt: 3 }}>
+<CardContent sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
         <Grid container direction="column" justifyContent="space-between" style={{ width: '20%' }}>
           <Grid item>
             <Typography variant="h1" gutterBottom fontWeight="normal">Alugar bem, sem complicação e fiador</Typography>
@@ -28,8 +28,7 @@ export default function BasicCard() {
             <Button variant="contained" color="primary" sx={{ borderRadius: '20px', color: 'black', backgroundColor: "white", mt: 2, width: "250px" }} endIcon={<ArrowForwardIcon />}>
               Como alugar no QuintoAndar
             </Button>
-
-          </Grid>
+         </Grid>
         </Grid>
         <CardMedia
           component="img"
@@ -38,8 +37,8 @@ export default function BasicCard() {
           alt="Placeholder Image"
         />
       </CardContent>
-    </Card>
-    
+      </Card>
+       <Row31/>
     </Box>
   );
 }

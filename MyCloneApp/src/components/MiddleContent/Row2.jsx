@@ -9,11 +9,11 @@ import Typography from '@mui/material/Typography';
 
 function BlueCard() {
   const cardStyle = {
-    border: '20px solid blue',
+    border: '30px solid blue',
     padding: '30px',
-    width: '500px',
+    width: '525px',
     height: '550px',
-    marginTop: '80px',
+    marginTop: '70px',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
@@ -57,7 +57,7 @@ export default function Row2() {
   return (
     <Grid container spacing={4} justifyContent="center">
       <Grid item xs={12} sm={6}>
-        <img src={imageSrc} alt="Description of the image" style={{ maxWidth: '120%', height: '550px', margin:80,  marginLeft: '-5px', marginRight: 'auto', }} />
+        <img src={imageSrc} alt="Description of the image" style={{ maxWidth: '120%', height: '550px', margin:70,  marginLeft: '-5px', marginRight: 'auto', }} />
       </Grid>
       <Grid item xs={12} sm={6}>
         <Box display="flex" justifyContent="center">

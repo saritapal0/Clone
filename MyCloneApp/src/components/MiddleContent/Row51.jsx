@@ -3,9 +3,9 @@ import Box from '@mui/material/Box';
 import image5 from "../../assets/Images/image5.webp";
 
 
-export default function Row3() {
+export default function Row51() {
   return (
-    <Box sx={{ display: 'flex', justifyContent: 'flex-start', paddingLeft: '200px', marginLeft: '150px', mt:"30px" }}>
+    <Box sx={{ mt:7 }}>
       <img 
         src={image5} 
         style={{ 

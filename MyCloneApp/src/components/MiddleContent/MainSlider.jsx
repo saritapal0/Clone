@@ -74,8 +74,7 @@ export default function MainSlider() {
       backgroundPosition: 'center',
     }}
   >
-  
-      <Card variant="outlined" sx={{ borderRadius: 0 }}>{card}</Card>
+    <Card variant="outlined" sx={{ borderRadius: 0 }}>{card}</Card>
     </Box>
   );
 }

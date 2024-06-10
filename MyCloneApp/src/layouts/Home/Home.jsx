@@ -5,7 +5,8 @@ import Row3 from '../../components/MiddleContent/Row3'
 import Row4 from '../../components/MiddleContent/Row4'
 import Row5 from '../../components/MiddleContent/Row5'
 import Row6 from '../../components/MiddleContent/Row6'
-import Text from '../../components/MiddleContent/Text'
+import Text1 from '../../components/MiddleContent/Text1'
+import Text2 from '../../components/MiddleContent/Text2'
 import Populares from '../../components/MiddleContent/Populares'
 
 
@@ -20,7 +21,8 @@ export default function Home() {
         <Row4/>
         <Row5/>
         <Row6/>
-        <Text/>
+        <Text1/>
+        <Text2/>
         <Populares/>
     </>
   )

@@ -8,9 +8,10 @@ import { Box, Divider } from '@mui/material';
 import CardMedia from '@mui/material/CardMedia';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Ph from '../../assets/Images/Ph.webp'; // Import image
+import Row61 from '../../components/MiddleContent/Row61'
 
 
-export default function BasicCard() {
+export default function Row6() {
   return (
     <Box>
       <Card sx={{ display: 'flex', maxWidth: 700, minHeight: 575, backgroundColor: '#3f51b5',borderRadius:0 }}>
@@ -40,8 +41,9 @@ export default function BasicCard() {
             alt="Placeholder Image"
           />
         </CardContent>
+        <Row61/>  
       </Card>
-
+    
     </Box>
   );
 }

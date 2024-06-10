@@ -1,7 +1,7 @@
 import { Box, Typography ,Divider} from '@mui/material'
 import React from 'react'
 
-export default function Text() {
+export default function Text1() {
   return (
     <Box>
        <Typography variant='h1'>

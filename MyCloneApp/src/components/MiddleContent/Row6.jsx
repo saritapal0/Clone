@@ -43,7 +43,6 @@ export default function Row6() {
         </CardContent>
         <Row61/>  
       </Card>
-    
     </Box>
   );
 }

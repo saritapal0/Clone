@@ -68,7 +68,7 @@ export default function MainSlider() {
         display: 'flex',
         justifyContent: 'flex-start', // Align items to the left
         alignItems: 'center',
-        height: '110vh', // Full viewport height
+        height: '100vh', // Full viewport height
         width: '100vw', // Full viewport width
         backgroundImage: `url(${bgimg})`, // Use the imported background image
         backgroundSize: 'cover',

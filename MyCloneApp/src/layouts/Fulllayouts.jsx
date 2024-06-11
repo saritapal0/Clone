@@ -41,12 +41,12 @@ const FullLayout = () => {
       <Header/>
       <PageWrapper>
         <Container
-          maxWidth={false}
+          minWidth={false}
           sx={{
              pt:5,
           }}
         >
-          <Box sx={{ minHeight: "calc(100vh - 170px)"}}>
+          <Box>
             <Outlet />
           </Box>
           <Footer />

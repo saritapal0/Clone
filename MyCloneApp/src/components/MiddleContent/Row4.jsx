@@ -14,7 +14,6 @@ export default function Row4() {
           width: '475px', // Set the width (adjust as needed)
           marginLeft: '10px',
           // paddingLeft:20
-          
         }} 
       />
       <Row41/>

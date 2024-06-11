@@ -6,8 +6,8 @@ const navItems = [
     subItems: [
       {
         id: 11,
-        title: "UserList1",
-        href: "/user/userlist1",
+        title: "C",
+        href: "/alugar/C",
       },
       {
         id: 12,
@@ -57,7 +57,7 @@ const navItems = [
     subItems: [
       {
         id: 41,
-        title: "SubItem5",
+        title: "Utilidades",
         href: "/subitem5",
       },
       {
@@ -69,8 +69,20 @@ const navItems = [
   },
   {
     id: 5,
-    title: "Ajuda",
-    href: "/ajuda",
+    title: "Ajuda", // Adjusted title with correct accent
+    href: "/yet-another-item",
+    subItems: [
+      {
+        id: 41,
+        title: "Utilidades",
+        href: "/subitem5",
+      },
+      {
+        id: 42,
+        title: "SubItem6",
+        href: "/subitem6",
+      },
+    ],
   },
 ];
 

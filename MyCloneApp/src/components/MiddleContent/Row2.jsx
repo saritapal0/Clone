@@ -10,7 +10,7 @@ import Typography from '@mui/material/Typography';
 function BlueCard() {
   const cardStyle = {
     border: '30px solid blue',
-    padding: '30px',
+    padding: '40px',
     width: '525px',
     height: '550px',
     marginTop: '70px',

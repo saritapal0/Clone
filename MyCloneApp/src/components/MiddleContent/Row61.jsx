@@ -12,10 +12,7 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 export default function Row61() {
   return (
     <Box style={{ display: 'flex', justifyContent: 'flex-start', marginx: "50px" ,paddingRight:30}}>
-      <Card sx={{ maxWidth: 710, minHeight: 539, backgroundColor: '#bdbdbd', borderRadius: 0, marginRight:'20px'}}>
-       
-      </Card>
-      
+    
     </Box>
   );
 }

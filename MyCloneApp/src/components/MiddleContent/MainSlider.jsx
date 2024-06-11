@@ -55,26 +55,27 @@ const card = (
         mb: 2, // Adding margin bottom
       }}
     >
-    Buscar Imoveis
-    </Button>
+     Buscar Imoveis
+ </Button>
   </CardContent>
 );
 
 export default function MainSlider() {
   return (
+    
     <Box
-    sx={{
-      display: 'flex',
-      justifyContent: 'flex-start', // Align items to the left
-      alignItems: 'center',
-      height: '100vh', // Full viewport height
-      width: '100vw', // Full viewport width
-      backgroundImage: `url(${bgimg})`, // Use the imported background image
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-    }}
-  >
-    <Card variant="outlined" sx={{ borderRadius: 0 }}>{card}</Card>
+      sx={{
+        display: 'flex',
+        justifyContent: 'flex-start', // Align items to the left
+        alignItems: 'center',
+        height: '110vh', // Full viewport height
+        width: '100vw', // Full viewport width
+        backgroundImage: `url(${bgimg})`, // Use the imported background image
+        backgroundSize: 'cover',
+        backgroundPosition: 'left', // Move background image to the left side
+      }}
+    >
+      <Card variant="outlined" sx={{ borderRadius: 0 }}>{card}</Card>
     </Box>
   );
 }

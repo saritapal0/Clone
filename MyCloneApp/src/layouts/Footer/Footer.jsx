@@ -3,13 +3,20 @@ import {
   Box,
   Typography,
   Grid,
+  Card,
+  CardContent
 } from "@mui/material";
+import Googleplay from '../../assets/Images/Googleplay.png'
+import Appstore from '../../assets/Images/Appstore.png'
+import Logo from '../../../src/assets/Images/logo.svg';
+
+
 
 const Footer = () => {
   return (
     <Box sx={{ p: 6, bgcolor: '#fafafa', color: 'black', textAlign: 'left' }}>
-      <Grid container spacing={2}>
-        <Grid item xs={12} md={6} lg={4}>
+      <Grid container spacing={0} sx={{ textAlign: 'left' }}> {/* Set textAlign to left */}
+        <Grid item xs={12} md={6} lg={3}>
           <Typography variant="h6">Sobre nós</Typography>
           <Typography variant="body2">
             Conheça o QuintoAndar<br />
@@ -22,7 +29,7 @@ const Footer = () => {
             Relatório de Transparência Salarial
           </Typography>
         </Grid>
-        <Grid item xs={12} md={6} lg={4}>
+        <Grid item xs={12} md={6} lg={3}>
           <Typography variant="h6">Produtos</Typography>
           <Typography variant="body2">
             Simular financiamento imobiliário<br />
@@ -31,7 +38,7 @@ const Footer = () => {
             Meu Lugar
           </Typography>
         </Grid>
-        <Grid item xs={12} md={6} lg={4}>
+        <Grid item xs={12} md={6} lg={3}>
           <Typography variant="h6">Trabalhe com a gente</Typography>
           <Typography variant="body2">
             Carreiras<br />
@@ -42,27 +49,39 @@ const Footer = () => {
             Parceria com Portarias
           </Typography>
         </Grid>
-      </Grid>
-      <Box sx={{ mt: 4 }}>
+        <Grid item xs={12} md={6} lg={3}>
+  <Card sx={{ borderRadius: 8, bgcolor: '#283593', borderRadius: 0 }}>
+    <CardContent>
+      {/* Logo Image */}
+      <img src={Logo} alt="Logo" style={{ height: '25px', width: 'auto', filter: 'invert(100%)' }} />
+      {/* Card Content */}
+      <Box sx={{ mt: 2, color: "white" }}>
         <Typography variant="body2">
-          Politica de privacidade<br />
-          Termos e condições de uso<br />
-          Política de Cookies<br />
-          Preferências de cookies<br />
-          Manual do usuário
+        Para proporcionar uma experiência inesquecível para quem precisa de um lar ou anuncia com a gente, o QuintoAndar aposta em design, segurança e tecnologia de ponta.
         </Typography>
       </Box>
+    </CardContent>
+  </Card>
+</Grid>
+
+      </Grid>
       <Box sx={{ mt: 4 }}>
         <Typography variant="body2">
           GRPQA Ltda. - CRECI-SP J24.344
         </Typography>
       </Box>
-      <Box sx={{ mt: 4 }}>
-        <Typography variant="body2">
-          Versão: 06/06/2024, 15:00<br />
-          Google Play Quinto Andar App<br />
-          App Store Quinto Andar App
+      <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+        <Typography variant="body2" sx={{ flex: 1 }}>
+          Versão: 06/06/2024, 15:00
         </Typography>
+        <Box display="flex" justifyContent="flex-end">
+          <Box display="flex" alignItems="center" mr={1}>
+            <img src={Googleplay} alt="Google Play" />
+          </Box>
+          <Box display="flex" alignItems="center">
+            <img src={Appstore} alt="App Store" />
+          </Box>
+        </Box>
       </Box>
     </Box>
   );

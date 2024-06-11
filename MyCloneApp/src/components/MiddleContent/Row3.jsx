@@ -13,32 +13,32 @@ import Row31 from '../../components/MiddleContent/Row31'
 export default function Row3() {
   return (
     <Box>
-    <Card sx={{ display: 'flex', maxWidth: 710, minHeight: 610, backgroundColor: '#e1bee7', mt: 0,borderRadius:0 }}>
-    <CardContent sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
-        <Grid container direction="column" justifyContent="space-between" style={{ width: '20%' }}>
-          <Grid item>
-            <Typography variant="h1" gutterBottom fontWeight="normal">Alugar bem, sem complicação e fiador</Typography>
-            <Typography variant="body1" paragraph fontWeight="normal">
-              Agende visitas online, negocie sem intermediários e assine o contrato digitalmente.
-              Sem fiador. Sem depósito caução. Sem filas.
-            </Typography>
+      <Card sx={{ display: 'flex', maxWidth: 710, minHeight: 610, backgroundColor: '#e1bee7', mt: 0, borderRadius: 0 }}>
+        <CardContent sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
+          <Grid container spacing={2} justifyContent="center" alignItems="center">
+            <Grid item xs={12} sm={6}>
+              <Typography variant="h1" gutterBottom fontWeight="normal">Alugar bem, sem complicação e fiador</Typography>
+              <Typography variant="body1" paragraph fontWeight="normal">
+                Agende visitas online, negocie sem intermediários e assine o contrato digitalmente.
+                Sem fiador. Sem depósito caução. Sem filas.
+              </Typography>
+              <Button variant="contained" color="primary" sx={{ borderRadius: '20px', color: 'black', backgroundColor: "white", width: "100%" }}>Ver apartamentos para alugar</Button>
+              <Button variant="contained" color="primary" sx={{ borderRadius: '20px', color: 'black', backgroundColor: "white", mt: 2, width: "100%" }} endIcon={<ArrowForwardIcon />}>
+                Como alugar no QuintoAndar
+              </Button>
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <CardMedia
+                component="img"
+                sx={{ width: '100%' }}
+                image={Table} // Set the imported image variable as the source
+                alt="Placeholder Image"
+              />
+            </Grid>
           </Grid>
-          <Grid item>
-            <Button variant="contained" color="primary" sx={{ borderRadius: '20px', color: 'black', backgroundColor: "white", width: "250px" }}>Ver apartamentos para alugar</Button>
-            <Button variant="contained" color="primary" sx={{ borderRadius: '20px', color: 'black', backgroundColor: "white", mt: 2, width: "250px" }} endIcon={<ArrowForwardIcon />}>
-              Como alugar no QuintoAndar
-            </Button>
-         </Grid>
-        </Grid>
-        <CardMedia
-          component="img"
-          sx={{ width: '60%' }}
-          image={Table} // Set the imported image variable as the source
-          alt="Placeholder Image"
-        />
-      </CardContent>
+        </CardContent>
       </Card>
-       <Row31/>
+      <Row31 />
     </Box>
   );
 }

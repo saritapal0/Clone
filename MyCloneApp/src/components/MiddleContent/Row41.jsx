@@ -11,10 +11,10 @@ import Lock from '../../assets/Images/lock.webp'; // Import image
 
 export default function Row4() {
   return (
-    <Box style={{ display: 'flex', justifyContent: 'flex-start', marginx: "50px" ,paddingRight:30}}>
-      <Card sx={{ maxWidth: 710, minHeight: 539, backgroundColor: '#bdbdbd', borderRadius: 0, marginRight:'20px'}}>
+    <Box>
+      <Card sx={{ display: 'flex', mt: 0, mx: -22, minWidth: "100%", minHeight: 535, width: "700px", backgroundColor: '#bdbdbd', borderRadius: 0, marginRight: '10px' }}>
         <CardContent sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
-          <Grid container direction="column" justifyContent="space-between" style={{ width: '30%' }}>
+          <Grid container direction="column" justifyContent="space-between" style={{ width: '30%', }}>
             <Grid item>
               <Typography variant="h1" gutterBottom fontWeightBold="normal">Comprar seu imóvel e ter um cantinho só seu</Typography>
               <Typography variant="body1" paragraph fontWeight="normal">
@@ -30,7 +30,7 @@ export default function Row4() {
           </Grid>
           <CardMedia
             component="img"
-            sx={{ width: '40%' }}
+            sx={{ width: '40%', marginLeft: 'auto' }} // Adjusted margin left to auto
             image={Lock} // Set the imported image variable as the source
             alt="Placeholder Image"
           />

@@ -8,37 +8,56 @@ import { Box } from '@mui/material';
 import CardMedia from '@mui/material/CardMedia';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Gate from '../../assets/Images/Gate.webp'; // Import image
-import Row51 from '../../components/MiddleContent/Row51'
+import image5 from "../../assets/Images/image5.webp";
 
-export default function Row5() {
+export default function Row3() {
+  const [imageDimensions, setImageDimensions] = React.useState({ width: 0, height: 0 });
+
+  const handleImageLoad = (event) => {
+    const { naturalWidth, naturalHeight } = event.target;
+    setImageDimensions({ width: naturalWidth, height: naturalHeight });
+  };
+
   return (
-    <Box style={{ display: 'flex', justifyContent: 'flex-start', marginright: "40px" }}>
-      <Card sx={{ display: 'flex', maxWidth: 710, minHeight: 600, backgroundColor: '#fce4ec', mt: 7, borderRadius: 0 }}>
-        <CardContent sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
-          <Grid container direction="column" justifyContent="space-between" style={{ width: '20%' }}>
-            <Grid item>
-              <Typography variant="h1" gutterBottom fontWeight="normal">Alugar bem, sem complicação e fiador</Typography>
-              <Typography variant="body1" paragraph fontWeight="normal">
-                Agende visitas online, negocie sem intermediários e assine o contrato digitalmente.
-                Sem fiador. Sem depósito caução. Sem filas.
-              </Typography>
-            </Grid>
-            <Grid item>
-              <Button variant="contained" color="primary" sx={{ borderRadius: '20px', color: 'black', backgroundColor: "white", width: "250px" }}>Ver apartamentos para alugar</Button>
+    <Box>
+      <Grid container spacing={2} justifyContent="center" alignItems="center" >
+        <Grid item xs={12} sm={6}>
+          <Card sx={{ display: 'flex', mt: 8, mx: -6, minWidth: "100%", minHeight: 500, width: "700px", backgroundColor: '#fce4ec', borderRadius: 0 }}>
+            <CardContent sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
+              <Grid container spacing={2} justifyContent="flex-start" alignItems="center"> {/* Adjusted justifyContent */}
+                <Grid item xs={12} sm={6}>
+                  <Typography variant="h1" gutterBottom fontWeight="normal">Alugar bem, sem complicação e fiador</Typography>
+                  <Typography variant="body1" paragraph fontWeight="normal">
+                    Agende visitas online, negocie sem intermediários e assine o contrato digitalmente.
+                    Sem fiador. Sem depósito caução. Sem filas.
+                  </Typography>
+                  <Button variant="contained" color="primary" sx={{ borderRadius: '20px', color: 'black', backgroundColor: "white", width: "250px" }}>Ver apartamentos para alugar</Button>
               <Button variant="contained" color="primary" sx={{ borderRadius: '20px', color: 'black', backgroundColor: "white", mt: 2, width: "250px" }} endIcon={<ArrowForwardIcon />}>
                 Como alugar no QuintoAndar
               </Button>
-            </Grid>
-          </Grid>
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                  <CardMedia
+                    component="img"
+                    sx={{ width: '80%', mt: 10 }}
+                    image={Gate}
+                    alt="Placeholder Image"
+                  />
+                </Grid>
+              </Grid>
+            </CardContent>
+          </Card>
+        </Grid>
+        <Grid item xs={12} sm={6}>
           <CardMedia
             component="img"
-            sx={{ width: '50%' }}
-            image={Gate} // Set the imported image variable as the source
+            src={image5}
             alt="Placeholder Image"
+            onLoad={handleImageLoad}
+            sx={{ maxWidth: "90%", maxHeight: 500, mx: 5, mt: 6 }}
           />
-        </CardContent>
-      </Card>
-     <Row51/>
+        </Grid>
+      </Grid>
     </Box>
   );
 }

@@ -11,15 +11,15 @@ import Ph from '../../assets/Images/Ph.webp'; // Import image
 import Row61 from '../../components/MiddleContent/Row61'
 
 
-const TwoCardsInOneRow = () => {
+const Row6 = () => {
   return (
     <Grid container spacing={2}>
       <Grid item xs={12} sm={6}>
-        <Card sx={{ display: 'flex', maxWidth: 700, minHeight: 575, backgroundColor: '#3f51b5', borderRadius: 0 }}>
+        <Card sx={{ display: 'flex', maxWidth: 700, minHeight: 575, backgroundColor: '#3f51b5', borderRadius: 0 ,minHeight:525}}>
           <CardContent sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
             <Grid container direction="column" justifyContent="space-between" style={{ width: '20%' }}>
               <Grid item>
-                <Typography variant="h3" gutterBottom fontWeight="normal">Proprietário, boa notícia:</Typography>
+                <Typography variant="h1" gutterBottom fontWeight="normal">Proprietário, boa notícia:</Typography>
                 <Divider />
                 <Typography variant="body1" paragraph fontWeight="normal">
                   No QuintoAndar
@@ -28,8 +28,8 @@ const TwoCardsInOneRow = () => {
                 </Typography>
                 <Divider />
               </Grid>
-              <Grid item>
-                <Button variant="contained" color="primary" sx={{ borderRadius: '30px', color: 'black', backgroundColor: "white", mt: 2, width: "200px", height: "50px" }} endIcon={<ArrowForwardIcon />}>
+              <Grid item sx={{mt:8,}}>
+                <Button variant="contained" color="primary" sx={{borderRadius: '30px', color: 'black', backgroundColor: "white", mt: 2, width: "200px", height: "50px" }} endIcon={<ArrowForwardIcon />}>
                   Anunciar agora
                 </Button>
               </Grid>
@@ -50,4 +50,4 @@ const TwoCardsInOneRow = () => {
   );
 };
 
-export default TwoCardsInOneRow;
+export default Row6;

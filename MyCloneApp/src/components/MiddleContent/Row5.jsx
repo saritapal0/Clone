@@ -32,9 +32,9 @@ export default function Row3() {
                     Sem fiador. Sem depósito caução. Sem filas.
                   </Typography>
                   <Button variant="contained" color="primary" sx={{ borderRadius: '20px', color: 'black', backgroundColor: "white", width: "250px" }}>Ver apartamentos para alugar</Button>
-              <Button variant="contained" color="primary" sx={{ borderRadius: '20px', color: 'black', backgroundColor: "white", mt: 2, width: "250px" }} endIcon={<ArrowForwardIcon />}>
-                Como alugar no QuintoAndar
-              </Button>
+                  <Button variant="contained" color="primary" sx={{ borderRadius: '20px', color: 'black', backgroundColor: "white", mt: 2, width: "250px" }} endIcon={<ArrowForwardIcon />}>
+                    Como alugar no QuintoAndar
+                  </Button>
                 </Grid>
                 <Grid item xs={12} sm={6}>
                   <CardMedia

@@ -15,18 +15,17 @@ export default function MainSlider() {
     <Box
       sx={{
         display: 'flex',
-        justifyContent: 'flex-start', // Align items to the left
+        justifyContent: '', // Align items to the left
         alignItems: 'center',
         height: '100vh', // Full viewport height
         width: '100vw', // Full viewport width
         backgroundImage: `url(${bgimg})`, // Use the imported background image
         backgroundSize: 'cover',
-        backgroundPosition: 'left', // Move background image to the left side
       }}
     >
       <Grid container justifyContent="left">
         <Grid item xs={12} sm={6}>
-          <Card variant="outlined" sx={{ borderRadius: 0 }}>
+          <Card variant="outlined" sx={{ borderRadius: 0, width:400}}>
             <CardContent>
               <Typography variant='h1'>
                 Encontre um lar para chamar de seu
@@ -54,7 +53,7 @@ export default function MainSlider() {
                       <SearchIcon sx={{ mr: 1 }} /> // Search icon as start adornment
                     ),
                   }}
-                  sx={{ width: '100%', height: '50px', mt: '40px', p: 3 }} // Adjust width and height of TextField
+                  sx={{ width: '80%', height: '50px', mt: '40px', p: 3, mx:3,}} // Adjust width and height of TextField
                   variant="outlined"
                 />
               </Box>
@@ -62,10 +61,11 @@ export default function MainSlider() {
                 variant="contained"
                 color="primary"
                 sx={{
-                  width: '100%',
+                  width: '80%',
                   height: 50,
                   mt: 8,
                   mb: 2,
+                  mx:2,
                   borderRadius:10
                 }}
               >

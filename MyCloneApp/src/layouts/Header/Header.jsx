@@ -50,56 +50,56 @@ function Header(props) {
   const drawer = (
     <Box sx={{ width: drawerWidth }} onClick={handleDrawerToggle}>
       <Typography
-            variant="h6"
-            component="div"
-            sx={{
-              flexGrow: 1,
-              display: { sm: 'block' },
-              position: 'fixed',
-              mx: 3,
-              mt: 2
-            }}
-          >
-            <img src={Logo} alt="Logo" style={{ height: '25px', width: 'auto' }} />
-            <IconButton aria-label="Close">
-        <CloseIcon />
-      </IconButton>
-     </Typography>
-     <Divider/>
+        variant="h6"
+        component="div"
+        sx={{
+          flexGrow: 1,
+          display: { sm: 'block' },
+          position: 'fixed',
+          mx: 3,
+          mt: 2
+        }}
+      >
+        <img src={Logo} alt="Logo" style={{ height: '25px', width: 'auto' }} />
+        <IconButton aria-label="Close">
+          <CloseIcon />
+        </IconButton>
+      </Typography>
+      <Divider />
       <Toolbar />
       <Divider />
       <List>
-      {navItems.map((item) => (
-        <ListItem key={item.id} disablePadding sx={{ py: 1}}>
-          <ListItemButton onClick={handleMenuClick}>
-            <ListItemText primary={item.title} />
-            {item.subItems && <ArrowDropDownIcon />}
-          </ListItemButton>
-          {item.subItems && (
-  <Menu
-    anchorEl={anchorEl}
-    open={Boolean(anchorEl)}
-    onClose={handleMenuClose}
-    PaperProps={{
-      style: {
-        width: '200px', // Adjust the width as per your requirement
-      },
-    }}
-  >
-    {item.subItems.map((subItem, index) => (
-      <div key={subItem.id}>
-        <MenuItem component={Link} to={subItem.href} onClick={handleMenuClose}>
-          {subItem.title}
-        </MenuItem>
-        {index !== item.subItems.length - 1 && <Divider />}
-      </div>
-    ))}
-  </Menu>
-)}
-        </ListItem>
-      ))}
-    </List>
-  </Box>
+        {navItems.map((item) => (
+          <ListItem key={item.id} disablePadding sx={{ py: 1 }}>
+            <ListItemButton onClick={handleMenuClick}>
+              <ListItemText primary={item.title} />
+              {item.subItems && <ArrowDropDownIcon />}
+            </ListItemButton>
+            {item.subItems && (
+              <Menu
+                anchorEl={anchorEl}
+                open={Boolean(anchorEl)}
+                onClose={handleMenuClose}
+                PaperProps={{
+                  style: {
+                    width: '200px', // Adjust the width as per your requirement
+                  },
+                }}
+              >
+                {item.subItems.map((subItem, index) => (
+                  <div key={subItem.id}>
+                    <MenuItem component={Link} to={subItem.href} onClick={handleMenuClose}>
+                      {subItem.title}
+                    </MenuItem>
+                    {index !== item.subItems.length - 1 && <Divider />}
+                  </div>
+                ))}
+              </Menu>
+            )}
+          </ListItem>
+        ))}
+      </List>
+    </Box>
   );
 
   const container = window !== undefined ? () => window().document.body : undefined;
@@ -116,7 +116,7 @@ function Header(props) {
       >
         <MenuIcon />
       </IconButton>
-      <AppBar  sx={{ bgcolor: 'white', height: '100px', zIndex: 0 }}>
+      <AppBar sx={{ bgcolor: 'white', height: '100px', zIndex: 0 }}>
         <Toolbar>
           <Typography
             variant="h6"
@@ -146,31 +146,30 @@ function Header(props) {
               ))}
           </Box>
 
-        
-            {!isSmallScreen &&
-             <Button
-            
-             onClick={handleMenuClick}
-             sx={{
-               backgroundColor: '#eeeeee', // Set the background color to your desired color
-               borderRadius: 5,
-               position: 'relative',
-               mt: 4,
-               mr: 4,
-               color: 'black', // Set text color to black
-               height: '50px', // Set the height of the button
-               width: '120px', // Set the width of the button
-               display: 'flex',
-               justifyContent: 'center',
-               alignItems: 'center',
-             }}
-           >
-             Entrar
-             <AccountCircleIcon sx={{ marginLeft: -8 }} />
-           </Button>
-           
-              }
-          
+
+          {!isSmallScreen &&
+            <Button
+
+              onClick={handleMenuClick}
+              sx={{
+                backgroundColor: '#eeeeee', // Set the background color to your desired color
+                borderRadius: 5,
+                position: 'relative',
+                mt: 4,
+                mr: 4,
+                color: 'black', // Set text color to black
+                height: '50px', // Set the height of the button
+                width: '120px', // Set the width of the button
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}
+            >
+              Entrar
+              <AccountCircleIcon sx={{ marginLeft: -9   }} />
+            </Button>
+            }
+
         </Toolbar>
       </AppBar>
       <Drawer

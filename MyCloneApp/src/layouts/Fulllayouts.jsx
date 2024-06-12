@@ -41,7 +41,7 @@ const FullLayout = () => {
       <Header/>
       <PageWrapper>
         <Container
-          minWidth={false}
+          minWidth="lgUp"
           sx={{
              pt:5,
           }}

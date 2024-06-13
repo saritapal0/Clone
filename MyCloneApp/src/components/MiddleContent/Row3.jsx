@@ -22,7 +22,7 @@ export default function Row3() {
     <Box>
       <Grid container spacing={2} justifyContent="center" alignItems="center" >
         <Grid item xs={12} sm={6}>
-          <Card sx={{ display: 'flex', mt: 8,mx:-6, minWidth: "100%", minHeight: 500, width: "700px", backgroundColor: '#e1bee7', borderRadius: 0 }}>
+          <Card sx={{ display: 'flex', mt: 8, minWidth: "100%", minHeight: 500, width: "650px", backgroundColor: '#e1bee7', borderRadius: 0 }}>
             <CardContent sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
               <Grid container spacing={2} justifyContent="flex-start" alignItems="center"> {/* Adjusted justifyContent */}
                 <Grid item xs={12} sm={6}>
@@ -39,7 +39,7 @@ export default function Row3() {
                 <Grid item xs={12} sm={6}>
                   <CardMedia
                     component="img"
-                    sx={{ width: '100%', mt: 10 }}
+                    sx={{ width: '90%', mt: 10 }}
                     image={Table}
                     alt="Placeholder Image"
                   />
@@ -54,7 +54,7 @@ export default function Row3() {
             src={image}
             alt="Placeholder Image"
             onLoad={handleImageLoad}
-            sx={{ maxWidth: "90%", maxHeight: 500, mx: 5,mt:6}}
+            sx={{ maxWidth: "90%", maxHeight: 500, mx: 5, mt: 6 }}
           />
         </Grid>
       </Grid>

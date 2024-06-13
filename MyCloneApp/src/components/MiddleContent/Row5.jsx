@@ -22,7 +22,7 @@ export default function Row3() {
     <Box>
       <Grid container spacing={2} justifyContent="center" alignItems="center" >
         <Grid item xs={12} sm={6}>
-          <Card sx={{ display: 'flex', mt: 8, mx: -6, minWidth: "100%", minHeight: 500, width: "700px", backgroundColor: '#fce4ec', borderRadius: 0 }}>
+          <Card sx={{ display: 'flex', mt: 8, minWidth: "100%", minHeight: 500, width: "650px", backgroundColor: '#fce4ec', borderRadius: 0 }}>
             <CardContent sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
               <Grid container spacing={2} justifyContent="flex-start" alignItems="center"> {/* Adjusted justifyContent */}
                 <Grid item xs={12} sm={6}>

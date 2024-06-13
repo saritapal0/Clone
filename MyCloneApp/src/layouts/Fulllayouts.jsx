@@ -1,5 +1,5 @@
 import React from "react";
-import { experimentalStyled, Container, Box, CssBaseline } from "@mui/material";
+import {Container, Box } from "@mui/material";
 import { Outlet } from "react-router-dom";
 import Header from '../layouts/Header/Header';
 import Footer from "../layouts/Footer/Footer";

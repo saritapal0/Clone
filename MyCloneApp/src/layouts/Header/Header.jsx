@@ -26,10 +26,10 @@ import CloseIcon from '@mui/icons-material/Close';
 
 
 
-const drawerWidth = 240;
+const drawerWidth = 280;
 
 function Header(props) {
-  const { window } = props;
+
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const isSmallScreen = useMediaQuery('(max-width:600px)');
 
@@ -197,8 +197,6 @@ function Header(props) {
   );
 }
 
-Header.propTypes = {
-  window: PropTypes.func,
-};
+
 
 export default Header;

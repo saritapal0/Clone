@@ -4,16 +4,13 @@ import { Outlet } from "react-router-dom";
 import Header from '../Layouts/Fulllayout/Header/Header';
 import Footer from "../Layouts/Fulllayout/Footer/Footer";
 
-const MainWrapper = experimentalStyled("div")(({ theme }) => ({
-  display: "flex",
-  minHeight: "100vh",
-  overflow: "hidden",
-  width: "100%",
-}));
 
 const PageWrapper = experimentalStyled("div")(({ theme }) => ({
   display: "flex",
+  flexDirection: "column", // Ensure content is stacked vertically
   flex: "1 1 auto",
+  justifyContent: "center", // Center content vertically
+  alignItems: "center", // Center content horizontally
   overflow: "hidden",
   backgroundColor: theme.palette.background.default,
   [theme.breakpoints.up("lg")]: {
@@ -28,34 +25,29 @@ const FullLayout = () => {
   const [isSidebarOpen, setSidebarOpen] = useState(true);
   const [isMobileSidebarOpen, setMobileSidebarOpen] = useState(false);
 
-  
-
   return (
     <MainWrapper>
       <CssBaseline />
-        <Header
-          sx={{
-            paddingLeft: isSidebarOpen  ? "265px" : "",
-            backgroundColor: "#ffffff",
-          }}
-          toggleSidebar={() => setSidebarOpen(!isSidebarOpen)}
-          toggleMobileSidebar={() => setMobileSidebarOpen(true)}
-        />
-
+      <Header
+        sx={{
+          paddingLeft: isSidebarOpen ? "265px" : "",
+          backgroundColor: "#ffffff",
+        }}
+        toggleSidebar={() => setSidebarOpen(!isSidebarOpen)}
+        toggleMobileSidebar={() => setMobileSidebarOpen(true)}
+      />
       <PageWrapper>
         <Container
-          maxWidth={false}
+          maxWidth="lg" // Adjust maxWidth as per your design needs
           sx={{
-             paddingLeft: "280px!important" ,
+            paddingLeft: isSidebarOpen ? "280px" : "", // Adjust left padding based on sidebar state
             overflow: "hidden",
           }}
         >
-          <Box sx={{ minHeight: "calc(100vh - 170px)" }}>
-            <Outlet />
-          </Box>
-        <Footer />
+          <Outlet />
         </Container>
       </PageWrapper>
+      <Footer />
     </MainWrapper>
   );
 };
